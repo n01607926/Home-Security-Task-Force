@@ -1,0 +1,164 @@
+/*for all pages*/
+body, html{
+    height: 100%;
+    margin-left: 1.2em;
+    margin-right: 1.15em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+    margin-bottom: 2em;
+}
+
+nav {
+    list-style-type: none;
+    padding: 1.2em;
+    overflow: hidden;
+    background-color: black;
+    margin-left: 20%;
+    
+}
+
+#navbar li {
+    float: left;
+    position: static;
+    display: block;
+    border: #39533C solid 2px;
+    background-color: #39533C;
+    margin-left: 1.5em;
+    
+
+}
+
+#navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*#navbar li a:hover {
+    text-shadow: 2px 2px white;
+}*/
+#navbar li:hover{
+    box-shadow: 2px 2px 2px 2px white;
+}
+
+/*#navbar lo{
+
+    float: right;
+    margin-left: 75%;
+}*/
+
+input[type="submit"] {
+    background-color: #39533C;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #39533C;
+    }
+
+    footer{
+        padding: 20px;
+        background-color: #39533C;
+        color: white;
+        border-radius: 10px 10px 10px 10px;
+    }
+    footer h2{
+        text-align: center;
+    }
+    footer li{
+        list-style-type: none ;
+    }
+    footer li a{
+        color: white;
+        font-size: medium;
+    }
+    #logo{
+        margin-left: 45%;
+
+    }
+    .dark {
+        background-color: black;
+        color: #39533C;
+        padding: 1.5em;
+    }
+    .light{
+        background-color: #39533C;
+        color:white;
+        margin:0%;
+        border-radius: 10px 10px 10px 10px;
+        padding: 1.5em;
+    }
+
+
+    /*forms*/
+    form {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 2px solid #39533C;
+    }
+
+
+    input[type="submit"] {
+        background-color: #39533C;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    input[type="submit"]:hover {
+        background-color: #39533C;
+    }
+  
+    /*other similar styling across pages*/
+    .toi{
+        background-color: rgba(0,0,0,0.75);
+        opacity: 20px;
+        padding: 2em;
+    }
+    .toi h4{
+        border-left: 5px solid #39533c;
+        font-style: italic;
+        text-align: left;
+        padding-left: 1.5em;
+        margin-left: 1.2em;
+        font-size: medium;
+    }
+    #CO button{
+        background-color: #39533C;
+        padding: 1.5em;
+        border-radius: 10px 10px 10px 10px;
+        margin-left: 25%;
+    }
+    #CO a{
+        color: black;
+        text-decoration: none;
+        text-shadow: 2px 3px white;
+    }

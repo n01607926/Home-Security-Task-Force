@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Force: Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Security Devices</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            p, form{
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            h1, h4, table, h3{
+                text-align: center;
+            }
+
+            .introimg{
+                background-image: url(Img1.webp);
+                background-position: center;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .overlay {
+                text-align: center;
+                color: #fff;
+            }
+
+            #TF {
+                font-size: 100px;
+                margin-bottom: 10px;
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            }
+
+            .toi h4{
+                border-left: 5px solid #39533c;
+                font-style: italic;
+                text-align: left;
+                padding-left: 1.5em;
+                margin-left: 1.2em;
+                font-size: medium;
+            }
+            #kanineintro img{
+                width: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <!--header-->
+        <header>
+            <div id="navbar">
+                <nav>
+                    <!--logo><a href="Home.html"><img src="Logo.webp" width="65px" height="65px"></a></logo>&nbsp;-->
+                    <li>
+                        <a href="Home.html">
+                            HOME
+                       </a>
+                    </li>
+                    <li>
+                        <a href="Kanine.html">
+                            KANINES
+                        </a>
+                    </li>
+                   <li>
+                        <a href="devices.html">
+                        DEVICES
+                        </a>
+                    </li>
+                    <li>  
+                        <a href="packages.html">
+                            PACKAGES
+                        </a>
+                    </li>
+                   <li>
+                        <a href="reviews.html">
+                            REVIEWS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="checkout.html">
+                            ORDER
+                        </a>
+                    </li>
+                </nav>
+            </div>
+        </header>
+        <!--intro image-->
+        <div class="introimg">
+            <div class="overlay">
+                <h1 id="TF">TASK FORCE</h1>
+                <br>
+                <div class="toi">
+                    <h4>"Task Force Security: Protecting You, Securing Tomorrow."</h4>
+                </div>
+            </div>
+        </div>
+        <!--scroll down-->
+        <!--Big header: Task Force Introduction-->
+        <div class="dark">
+            <br>
+            <h1>TASK FORCE: OUR INTRODUCTION</h1>
+            <p>We are Task Force Security, a versatile security company providing comprehensive protection through a combination of canine services and skilled security personnel. Our highly trained professionals and specially trained canines work together to detect threats, track individuals, and maintain a secure environment. Trust us to deliver exceptional security solutions tailored to your needs.</p>
+            &nbsp;
+        </div>
+        <div class="light">
+            <h1>OUR MISSION</h1>
+            <p>
+                Task Force Security is dedicated to providing exceptional home security solutions that prioritize safety, reliability, and customer satisfaction. Our mission is to create secure environments within homes by offering tailored security systems equipped with advanced technology, such as intrusion detection, surveillance cameras, access control, and alarm systems. We design, install, and maintain these systems to ensure proactive threat detection and rapid response, delivering peace of mind to our clients and their loved ones.
+            </p>
+            <p>
+                We understand the importance of seamless integration between our home security systems and our clients' lifestyles. Our user-friendly interfaces, remote monitoring capabilities, and smart automation features provide convenience, flexibility, and ease of use. By empowering homeowners to take control of their security, we enable them to enjoy a safe and secure living environment. Our commitment to ongoing innovation ensures that we stay at the forefront of the industry, continuously evaluating and adopting the latest advancements in home security technology.
+            </p>
+            <p>
+                Task Force Security's dedication extends beyond technology. We provide exceptional customer support, offering prompt assistance, technical expertise, and exceptional service to our clients throughout their partnership with us. Our goal is to be the trusted partner in safeguarding homes and protecting what matters most to our clients, delivering comprehensive security solutions that exceed their expectations.
+            </p>
+            <br>
+        </div>
+        <br>
+        <div class="dark">
+            <br>
+            <!--Featured Packages-->
+            <h1>FEATURED PACKAGE</h1>
+            <i><h4>See top package of the day below:</h4></i>
+            <div style="margin-left: 30%;">
+                <img src="kanine1.png" width="500"></img>
+            </div>
+            <br>
+        </div>
+        <div class="light" id="kanineintro">
+            <!--kanine division-->
+            <h1>KANINE DIVISION</h1>
+            <!--images for kanine division ends up being a background + white block for text-->
+            <img src="_91529473_finn1.jpg" alt="kanine and man" >
+            <p id="kanineintro">
+                At Kanine Division, our mission is to provide top-notch security services while prioritizing the well-being and protection of dogs. We train and deploy highly skilled canines to enhance our security operations, including detecting threats, tracking individuals, and providing crowd control. We believe in treating our canine partners with kindness and respect, ensuring their physical and mental health through proper care, training, and socialization. By fostering a strong bond between our handlers and dogs, we create a harmonious partnership that maximizes the effectiveness of our security services. We also advocate for responsible dog ownership and work to combat animal cruelty and neglect.
+            </p>
+            <br>
+        </div>
+        <br>
+        <div class="dark">
+            <br>
+            <!--Questionnaire: Form-->
+            <h3>Interested in our services? Fill Out the form below:</h3>
+            <form action="actionpg.php">
+                <label for="fName">First Name:</label>
+                <input type="text" id="FName" name="FName"><br>
+                <label for="email">Email:</label>
+                <input type="text" id="Email" name="Email"><br>
+                <p class="formp">Please select one or more of the following indicating your interests:</p>
+                <input type="checkbox" id="choice1" name="choice1" value="packages">
+                <label for="choice1">One or more of our packages</label><br>
+                <input type="checkbox" id="choice 2" name="choice2" value="kanines">
+                <label for="checkbox2">Kanine Division</label><br>
+                <input type="checkbox" id="choice3" name="choice3" value="Security">
+                <label for="choice3">Actual Security Personnel (Not Currently Offered)</label><br>
+                <input type="submit" value="submit">
+            </form>
+            <hr>
+        </div>
+        <footer>
+            <h2>Task Force Home Security&copy;</h2>
+            <br>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <br>
+            <logo id="logo"><a href="home.html"><img src="Logo.webp" width="100" length="100"></a></logo>
+        </footer>
+    </body>
+
+       
