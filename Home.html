@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Security Devices</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
         <style>
             p, form{
                 margin-left: 5%;
@@ -48,11 +49,9 @@
             #kanineintro img{
                 width: 100%;
             }
-            
         </style>
     </head>
     <body>
-        
         <!--header-->
         <header>
             <div id="navbar">
@@ -128,8 +127,8 @@
             <!--Featured Packages-->
             <h1>FEATURED PACKAGE</h1>
             <i><h4>See top package of the day below:</h4></i>
-            <div style="margin-left: 30%;">
-                <img src="kanine1.png" width="500"></img>
+            <div class="imgs">
+                <img id="fp" src="kanine1.png" width="500"></img>
             </div>
             <br>
         </div>
@@ -148,19 +147,19 @@
             <br>
             <!--Questionnaire: Form-->
             <h3>Interested in our services? Fill Out the form below:</h3>
-            <form action="actionpg.php">
+            <form id="feedback">
                 <label for="fName">First Name:</label>
-                <input type="text" id="FName" name="FName"><br>
+                <input type="text" id="FName" name="FName" placeholder="Enter your first name or anonymous if you wish to do so"><br>
                 <label for="email">Email:</label>
-                <input type="text" id="Email" name="Email"><br>
+                <input type="text" id="Email" name="Email" placeholder="This field is optional"><br>
                 <p class="formp">Please select one or more of the following indicating your interests:</p>
-                <input type="checkbox" id="choice1" name="choice1" value="packages">
+                <input type="checkbox" class="checkbox" id="choice1" name="choice1" value="packages">
                 <label for="choice1">One or more of our packages</label><br>
-                <input type="checkbox" id="choice 2" name="choice2" value="kanines">
+                <input type="checkbox" class="checkbox" id="choice 2" name="choice2" value="kanines">
                 <label for="checkbox2">Kanine Division</label><br>
-                <input type="checkbox" id="choice3" name="choice3" value="Security">
+                <input type="checkbox" class="checkbox" id="choice3" name="choice3" value="Security" >
                 <label for="choice3">Actual Security Personnel (Not Currently Offered)</label><br>
-                <input type="submit" value="submit">
+                <input type="submit" value="submit" onclick="validate()">
             </form>
             <hr>
         </div>
@@ -175,5 +174,4 @@
             <logo id="logo"><a href="home.html"><img src="Logo.webp" width="100" length="100"></a></logo>
         </footer>
     </body>
-
-       
+</html>
