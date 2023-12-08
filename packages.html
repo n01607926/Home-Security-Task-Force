@@ -13,31 +13,37 @@
       color:#39533C;
     }
     
+    /*could have gone together but*/
     .opackage{
-     background-image: linear-gradient(#39533c, black);
-     margin-left: 5%;
+     background-image: linear-gradient(#CD7F32,#39533c, black);
      border-radius: 10px;
      margin-bottom: 20px;
-     width: 500px;
+     width: auto;
     }
-    .apackage{
-      background-image: linear-gradient(#39533c, black);
+    .bpackage{
+    background-image: linear-gradient(silver,#39533c, black);
     border-radius: 10px;
-    margin-top: 30px;
-    width: 500px;
-    margin-left: 50%;
+    margin-bottom: 20px;
+    width: auto;
     }
 
-    .bpackage{
-      background-image: linear-gradient(#39533c, black);
+    .cpackage{
+      background-image: linear-gradient(#Ffd700, #39533c, black);
       border-radius: 10px;
-      width: 500px;
-      margin-left: 50%;
-      margin-top: -270px;
+      margin-bottom: 20px;
+      width: auto;
     }
+
+    .apackage{
+    background-image: linear-gradient(#E5E4E2,#39533c, black);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: auto;
+    }
+
 
     .package{
-      padding: 1.5em;
+      padding: 0.5em;
       
     }
     .package h2{
@@ -48,13 +54,7 @@
     .package p, .package li, .package a{
      margin-left: 10%;
     }
-    /*.package button{
-     background: black;
-     position: relative;
-    }
-    .package button a{
-     color: #39533C;
-    }*/
+    
    </style>
 </head>
 <body>
@@ -119,6 +119,21 @@
       <p class="price">$149.99/month</p>
       </div>
     </section>
+
+    <section class="cpackage">
+        <div class="package">
+          <h2>Gold Package</h2>
+          <p>Our premium package includes:</p>
+          <ul>
+          <li>Security cameras</li>
+          <li>Door and window sensors</li>
+          <li>24/7 monitoring</li>
+          <li>Smart home integration</li>
+          <li>Fire and carbon monoxide detectors</li>
+        </ul>
+        <p class="price">$199.99/month</p>
+        </div>
+      </section>
     
     <section class="apackage">
       <div class="package">
@@ -131,11 +146,13 @@
         <li>Smart home integration</li>
         <li>Fire and carbon monoxide detectors</li>
       </ul>
-      <p class="price">$199.99/month</p>
+      <p class="price">$299.99/month</p>
       </div>
       
     </section>
-  </div>
+</div>
+
+
   <br>
   <div id="CO" style="margin: 50px;">
     <h4 style="text-align: center;">Interested in purchasing any of the above? Visit Checkout! Or if you have any questions, don't hesitate to contact us!</h4>
@@ -151,5 +168,6 @@
     <br>
     <logo id="logo"><a href="home.html"><img src="Logo.webp" width="100" length="100"></a></logo>
 </footer>
+
 </body>
 </html>
