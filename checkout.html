@@ -1,3 +1,4 @@
+<!--validate using JavaScript-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,63 +8,59 @@
   <link rel="stylesheet" href="style.css"> <!-- You can link an external CSS file here -->
 </head>
   
-    <body>
-        <!--header-->
-        <header>
-            <div id="navbar">
-                <nav>
-                    <!--logo><a href="Home.html"><img src="Logo.webp" width="65px" height="65px"></a></logo>&nbsp;-->
-                    <li>
-                        <a href="Home.html">
-                            HOME
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Kanine.html">
-                            KANINES
-                        </a>
-                    </li>
+<body>
+    <!--header-->
+    <header>
+        <div id="navbar">
+            <nav>
+                <!--logo><a href="Home.html"><img src="Logo.webp" width="65px" height="65px"></a></logo>&nbsp;-->
                 <li>
-                        <a href="devices.html">
-                            DEVICES
-                        </a>
+                    <a href="Home.html">
+                        HOME
+                    </a>
                 </li>
                 <li>
-                        <a href="packages.html">
-                            PACKAGES
-                        </a>
-                    </li>
+                    <a href="Kanine.html">
+                        KANINES
+                    </a>
+                </li>
                 <li>
-                        <a href="reviews.html">
-                            REVIEWS
-                        </a>
-                    </li>
-                    <li>
-                        <a href="checkout.html">
-                            ORDER
-                        </a>
-                    </li>
-                </nav>
-            </div>
-        </header>
+                    <a href="devices.html">
+                        DEVICES
+                    </a>
+                </li>
+                <li>
+                    <a href="packages.html">
+                        PACKAGES
+                    </a>
+                </li>
+                <li>
+                    <a href="reviews.html">
+                        REVIEWS
+                    </a>
+                </li>
+                <li>
+                    <a href="checkout.html">
+                        ORDER
+                    </a>
+                </li>
+            </nav>
+        </div>
+    </header>
 
-        <h1 style="text-align: center;">WELCOME TO CHECKOUT</h1>
-        <p>Place your order below:</p>
-        <hr>
+    <h1 style="text-align: center;">WELCOME TO CHECKOUT</h1>
+    <p>Place your order below:</p>
+    <hr>
     <div class="checkout">
-        <form action="sucess.html" method="POST">
+        <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter First and Last Names" required><br>
-            <br>
+            <input type="text" id="name" name="name" placeholder="Enter First and Last Names" ><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter email address here" required><br>
-            <br>
+            <input type="email" id="email" name="email" placeholder="Enter email address here" ><br><br>
             <label for="number">Phone Number:</label>
-            <input type=text id="number" name="number" maxlength="maxlength" placeholder="Enter phone number in the followign format: 1234567890" required></input><br>
-            <br>
+            <input type="text" id="number" name="number" maxlength="10" placeholder="Enter phone number in the following format: 1234567890" ><br><br>
             <label for="address">Address:</label>
-            <input type=text id="address" name="address" placeholder="Enter home address here" required></input><br>
-            <br>
+            <input type="text" id="address" name="address" placeholder="Enter home address here" ><br><br>
             <label for="package">Select a product:</label>
             <select id="package" name="package" required>
                 <optgroup label="Packages">
@@ -75,8 +72,8 @@
                     <option value="security camera">Security Camera- $199.99</option>
                     <option value="motion sensor">Motion sensor - $49.99</option>
                     <option value="smart lock">Smart Lock - $129.99</option>
-                    <option value="Alarm Sytem">Alarm Sytem - $299.99</option>
-                    <option value="dorbell">Security Doorbell - $149.99</option>
+                    <option value="Alarm Sytem">Alarm System - $299.99</option>
+                    <option value="doorbell">Security Doorbell - $149.99</option>
                 </optgroup>
                 <optgroup label="Kanines">
                     <option value="kanine basic">Kanine Basic - $3000</option>
@@ -85,11 +82,34 @@
                     <option value="kanine premium">Kanine Premium - $8500</option>
                 </optgroup>
             </select>
-            <br>
-            <br>
-            <input type="submit" value="Place Order" class="btn">
+            <br><br>
+            <input type="submit" value="Place Order" class="btn" id="sub">
         </form>
     </div>
+    <script>
+        function validate(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+            var address = document.getElementById("address").value;
+
+            const userConfirmation = confirm("Confirm Purchase?");
+
+            if (userConfirmation) {
+                if (name !== "" && email !== "" && number !== "" && address !== "") {
+                    alert("Thank you for purchasing! An email will be sent shortly!");
+                } else {
+                    alert("Please fill out all fields appropriately before placing the order.");
+                }
+            } else {
+                alert("Cancelled successfully.");
+            }
+        }
+
+        var form = document.querySelector("form");
+        form.addEventListener("submit", validate);
+    </script>
     <footer>
         <h2>Task Force Home Security&copy;</h2>
         <br>
