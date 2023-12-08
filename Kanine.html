@@ -24,11 +24,33 @@
                 align-items: center;
             }
 
+            #kpackages{margin-left: 10%;}
+
             .overlay {
 
                 text-align: center;
                 color: #fff;
             }
+            @media (max-width: 1100px) {
+            #kpackages-table {
+                overflow-x: auto;
+            }
+
+            #kpackages {
+                display: block;
+                width: 100%;
+            }
+
+            #kpackages th,
+            #kpackages td {
+                display: block;
+                text-align: center;
+            }
+
+            #kpackages img {
+                margin-bottom: 20px;
+            }
+        }
         </style>
     </head>
     <body>
@@ -102,8 +124,8 @@
             <!--Packages-->
             <h1>KANINE PACKAGES</h1>
             <i><h4>See our top notch kanine packages below:</h4></i>
-            <div style="margin-left: 10%;">
-                <table>
+            <div id="kpackages-table">
+                <table id="kpackages">
                     <tr>
                         <th colspan="2">Kanine Packages</th>
                     </tr>
@@ -145,5 +167,3 @@
         </footer>
     </body>
 </html>
-
-       
