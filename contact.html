@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Task Force Home Security</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <style>
         h1 {
             color: white;
@@ -89,20 +90,20 @@
         </tr>
     </table>
 
-    <form action="#" method="post">
+    <form method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" placeholder="Enter full name here" class="contactField">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="enter email (eg. 123@abc.com)" class="contactField">
 
         <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required>
+        <input type="text" id="phone" name="phone" placeholder="Enter phone number (eg. 123-456-7890)" class="contactField">
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="Enter a message below" class="contactField"></textarea>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" onlick="validate()">
     </form>
 
     <footer>
@@ -132,16 +133,20 @@
                     const phone = $('#phone').val();
                     const message = $('#message').val();
 
+                    
                     if (name && email && phone && message) {
                         alert("Security check passed. Form submitted successfully!");
                     } else {
-                        alert("Please fill out all fields before submission.");
+                        alert("Please fill out all fields appropriately before submission.");
                     }
                 } else {
                     alert("Security check failed. Potential security breach detected! Our team has been notified.");
                 }
             });
         });
+
+    
+    
     </script>
 </body>
 </html>
