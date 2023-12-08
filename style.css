@@ -28,10 +28,9 @@ nav {
     position: static;
     display: block;
     border: #39533C solid 2px;
+    border-radius: 3px 3px 3px 3px;
     background-color: #39533C;
     margin-left: 1.5em;
-    
-
 }
 
 #navbar li a {
@@ -42,18 +41,31 @@ nav {
     text-decoration: none;
 }
 
-/*#navbar li a:hover {
-    text-shadow: 2px 2px white;
-}*/
 #navbar li:hover{
     box-shadow: 2px 2px 2px 2px white;
 }
 
-/*#navbar lo{
-
-    float: right;
-    margin-left: 75%;
-}*/
+/*navbar on small screens*/
+@media (max-width: 1100px){
+    nav li{
+        /*margin-left: 2%;*/
+        padding: 0em;
+        position: relative;
+    }
+    nav{
+        margin-left: 0%;
+        padding: 0%;
+        display: inline-flex;
+        justify-content: left;
+        width:auto;
+    }
+    nav ul{
+        padding: 0px;
+    }
+    .headps{
+        margin: 0%;
+    }
+}
 
 input[type="submit"] {
     background-color: #39533C;
@@ -69,9 +81,10 @@ input[type="submit"] {
 
     footer{
         padding: 20px;
-        background-color: #39533C;
+        background-image: linear-gradient(black, #39533c, #39533c);
         color: white;
         border-radius: 10px 10px 10px 10px;
+        font-family: Arial, Helvetica, sans-serif;
     }
     footer h2{
         text-align: center;
@@ -93,7 +106,7 @@ input[type="submit"] {
         padding: 1.5em;
     }
     .light{
-        background-color: #39533C;
+        background-image: linear-gradient(black,#39533c,#39533c,#39533c, black);
         color:white;
         margin:0%;
         border-radius: 10px 10px 10px 10px;
@@ -112,7 +125,6 @@ input[type="submit"] {
         margin-top: 10px;
         font-weight: bold;
     }
-
 
     input[type="text"],
     input[type="email"],
@@ -135,6 +147,12 @@ input[type="submit"] {
 
     input[type="submit"]:hover {
         background-color: #39533C;
+    }
+
+    #reviewSubBtn{
+        background-color: white;
+        color: #39533C;
+
     }
   
     /*other similar styling across pages*/
@@ -162,3 +180,12 @@ input[type="submit"] {
         text-decoration: none;
         text-shadow: 2px 3px white;
     }
+
+   /*images adjust to window size*/
+   .imgs{
+    width:70%;
+    height: 70%;
+    margin-left: 15%;
+   }
+
+   
