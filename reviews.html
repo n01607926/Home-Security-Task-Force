@@ -2,6 +2,7 @@
 <html>
     <head>
       <title>Task Force - Sponsors/Reviews</title>
+      <script src="script.js"></script>
       <link rel="stylesheet" href="style.css">
       <style>
           .light h1, p{
@@ -39,9 +40,9 @@
         position: absolute;
         top: 0;
         }
-
-        /* The dots/bullets/indicators */
-        .dot {
+ /*slideshows*/
+     /* The dots/bullets/indicators */
+     .dot {
         height: 15px;
         width: 15px;
         margin: 0 2px;
@@ -70,6 +71,7 @@
         @media only screen and (max-width: 300px) {
         .text {font-size: 11px}
         }
+       
       </style>
     </head>
     <body>
@@ -113,7 +115,7 @@
         </header>
         <div class="light">
             <h1>TASK FORCE IS USED BY THE TOP LEADING CORPORATIONS...</h1>
-            <img src="Sponsors.png" style="scale: 100%; margin-left: 20%;">
+            <img src="Sponsors.png" class="imgs">
             <h1>SO WHY SHOULDN'T YOU?</h1>
             <p>These companies trust us with their security, isn't that enough to trust us?</p>
         </div>
@@ -158,7 +160,23 @@ Don't trust corporate sponosors? Need to hear it from someone like you? These us
   <span class="dot"></span> 
 </div>
 
+<br>
+<div id="reviewSub" class="light">
+  <br>
+    <!--Review Form-->
+    
+    <h3>Submit a Review!</h3>
+  
+    <form id="review">
+        <input type="text" id="Name" name="Name" placeholder="Enter your Name or anonymous"><br>
+        <textarea name="review" id="reviewtext" placeholder="write review here (P.S you may also include the amount of stars you would rate us!)" rows="5" required></textarea><br>
+        <input type="submit" value="Submit" id="reviewSubBtn">
+    </form>
+</div>
+
+<!--js-->
 <script>
+  //review slideshow
   let slideIndex = 0;
   showSlides();
 
@@ -178,6 +196,28 @@ Don't trust corporate sponosors? Need to hear it from someone like you? These us
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Change image every 4 seconds
   }
+  //review form
+  function validate(){
+      const userConfirmation = confirm("Submit review?");
+
+      if (userConfirmation) {
+    
+          var review = document.getElementById("reviewtext").value;
+
+          if (review==="") {
+            alert("Please fill out all fields appropriately before submission.");
+          } else {
+            alert("Thank you for submitting a review!");
+          }
+      }
+      else{
+        alert("Cancelled");
+      }
+      event.preventDefault();
+  };
+  
+  var btn=document.getElementById("reviewSubBtn");
+  btn.onclick=validate;
 </script>
 <footer>
   <h2>Task Force Home Security&copy;</h2>
@@ -192,6 +232,3 @@ Don't trust corporate sponosors? Need to hear it from someone like you? These us
 
 </body>
 </html> 
-
-       
-swag       
