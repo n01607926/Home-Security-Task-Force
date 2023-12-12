@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Task Force Home Security</title>
     <link rel="stylesheet" href="style.css">
     <style>
-
         h1 {
             color: white;
         }
@@ -30,44 +30,42 @@
     </style>
 </head>
 <body>
-        <!--header-->
-        <header>
-            <div id="navbar">
-                <nav>
-                    <!--logo><a href="Home.html"><img src="Logo.webp" width="65px" height="65px"></a></logo>&nbsp;-->
-                    <li>
-                        <a href="Home.html">
-                            HOME
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Kanine.html">
-                            KANINES
-                        </a>
-                    </li>
-                   <li>
-                        <a href="devices.html">
-                            DEVICES
-                        </a>
-                   </li>
-                   <li>
-                        <a href="packages.html">
-                            PACKAGES
-                        </a>
-                    </li>
-                   <li>
-                        <a href="reviews.html">
-                            REVIEWS
-                        </a>
-                    </li>
-                    <li>
-                        <a href="checkout.html">
-                            ORDER
-                        </a>
-                    </li>
-                </nav>
-            </div>
-        </header>
+    <header>
+        <div id="navbar">
+            <nav>
+                <li>
+                    <a href="Home.html">
+                        HOME
+                    </a>
+                </li>
+                <li>
+                    <a href="Kanine.html">
+                        KANINES
+                    </a>
+                </li>
+                <li>
+                    <a href="devices.html">
+                        DEVICES
+                    </a>
+                </li>
+                <li>
+                    <a href="packages.html">
+                        PACKAGES
+                    </a>
+                </li>
+                <li>
+                    <a href="reviews.html">
+                        REVIEWS
+                    </a>
+                </li>
+                <li>
+                    <a href="checkout.html">
+                        ORDER
+                    </a>
+                </li>
+            </nav>
+        </div>
+    </header>
     <br>
     <table>
         <tr>
@@ -91,26 +89,23 @@
         </tr>
     </table>
 
-
-    <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required>
-
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-
+    <form id="contactForm" action="#" method="post">
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" name="userName" placeholder="Input Name" required>
+    
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" name="userEmail" placeholder="Input Email" required>
+    
+        <label for="userPhone">Phone:</label>
+        <input type="text" id="userPhone" name="userPhone" placeholder="Input Phone" required>
+    
+        <label for="userMessage">Message:</label>
+        <textarea id="userMessage" name="userMessage" placeholder="Input Message" rows="5" required></textarea>
+    
         <input type="submit" value="Submit">
     </form>
+    
+
     <footer>
         <h2>Task Force Home Security&copy;</h2>
         <br>
@@ -121,5 +116,32 @@
         <br>
         <logo id="logo"><a href="home.html"><img src="Logo.webp" width="100" length="100"></a></logo>
     </footer>
-</body>
-</html>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#contactForm').submit(function(event) {
+            event.preventDefault();
+
+            const userConfirmation = confirm("Initiating security check. Do you wish to proceed?");
+
+            if (userConfirmation) {
+                const name = $('#userName').val();
+                const email = $('#userEmail').val();
+                const phone = $('#userPhone').val();
+                const message = $('#userMessage').val();
+
+                if (name && email && phone && message) {
+                    alert("Security check passed. Form submitted successfully!\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nMessage: " + message);
+                    
+                } else {
+                    alert("Please fill out all fields before submission.");
+                }
+            } else {
+                alert("Security check failed. Potential security breach detected! Our team has been notified.");
+            }
+        });
+    });
+</script>
+
+
