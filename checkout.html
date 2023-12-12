@@ -90,30 +90,6 @@
             <input type="submit" value="Place Order" class="btn">
         </form>
     </div>
-       <script>
-        function validate(event) {
-            event.preventDefault();
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var number = document.getElementById("number").value;
-            var address = document.getElementById("address").value;
-
-            const userConfirmation = confirm("Confirm Purchase?");
-
-            if (userConfirmation) {
-                if (name !== "" && email !== "" && number !== "" && address !== "") {
-                    alert("Thank you for purchasing! An email will be sent shortly!");
-                } else {
-                    alert("Please fill out all fields appropriately before placing the order.");
-                }
-            } else {
-                alert("Cancelled successfully.");
-            }
-        }
-
-        var form = document.querySelector("form");
-        form.addEventListener("submit", validate);
-    </script>
     <footer>
         <h2>Task Force Home Security&copy;</h2>
         <br>
